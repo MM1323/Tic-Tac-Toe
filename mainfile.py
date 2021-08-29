@@ -4,7 +4,7 @@
 # Description
 '''
 This is a very simple tic tac toe game where two people play against each other.
-We chose this game becasue it tests our understanding with lists, for loops, and while loops.
+We chose this game because it tests our understanding with lists, for loops, and while loops.
 One the game is initialized the players get to choose there name and symbol. From there,
 the players play a game until one of them win or until there are no more moves.
 Once that happens, the players are asked if they want to play again and if they want to change there symbols.
@@ -25,7 +25,7 @@ def tictactoe():
     player1name = str(input(": "))
     print(player1name + ", which letter/symbol would you like to use as your tic-tac-toe marker? ")
     onesymbol = input(": ")
-    while not check_marker(onesymbol, None, None):  #checks if the marker imput is valid
+    while not check_marker(onesymbol, None, None):  #checks if the marker input is valid
         print("Which letter would you like to use? ")
         onesymbol = input(": ")
     #Sets up the name and the marker for player two
@@ -33,7 +33,7 @@ def tictactoe():
     player2name = input(": ")
     print(player2name + ", which letter/symbol would you like to use as your tic-tac-toe marker? ")
     twosymbol = input(": ")
-    while not check_marker(twosymbol, onesymbol, player1name):  #checks if the marker imput is valid
+    while not check_marker(twosymbol, onesymbol, player1name):  #checks if the marker input is valid
         print("Which letter would you like to use? ")
         twosymbol = input(": ")
 
@@ -129,10 +129,10 @@ def check_marker(value, previous, name):
 def locate_move(move, rows):
     '''
     (str, list, list, list) -> Bool or (row#, index of move)
-    Returns locaion of move as (row, index number).
+    Returns location of move as (row, index number).
     If incorrect move format is entered, return False.
     '''
-    #chcks if move in the cordinates
+    #checks if move in the coordinates
     if len(move) != 3 or move not in ["1,1", "1,2", "1,3", "2,1", "2,2", "2,3", "3,1", "3,2", "3,3"]:
         print()
         print("Please enter a valid number combination. See which combination (Ex: 1,1, 1,3, 2,1) corresponds to which space next to the current board.")
